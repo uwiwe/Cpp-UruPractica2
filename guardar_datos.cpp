@@ -23,6 +23,10 @@ int main(){
     cin >> x;
 
     fstream FILE("./archivo.bin",ios::out| ios::binary);
+    if (!FILE) {
+        cout << "Error al abrir el archivo" << endl;
+        return 0;
+    }
 
     for (int i = 1; i <= x; ++i) {
         People persona;
